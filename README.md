@@ -29,6 +29,9 @@ Blockchain based regulatory reporting and calculation of energy royalties. A sys
 
 ## API server
 
+# Postman Collection
+The postman collection can be found inside api/postman-collection
+
 # Accounts for Logging in Directly
 username: field_staff1 password: password
 username: production_accountant1 password: password

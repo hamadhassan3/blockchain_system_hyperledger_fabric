@@ -15,6 +15,12 @@ Blockchain based regulatory reporting and calculation of energy royalties. A sys
 11. Nodes in the blokchain use Raft consensus protocol
 12. History of each measurement remains saved. The person who made the change is always traceable.
 
+# Architecture
+The app uses a layered architecture. However, unlike other applications, the security checks are placed in the bottom most (blockchain) layer. This ensures that there is little to no vulnerability in the interface for upper layers. Since blockchain is a very sequre mechanism, the application is safe from attacks.
+
+![Screenshot 2021-07-26 at 10 36 26 AM](https://user-images.githubusercontent.com/60880656/127681584-e83b6a42-3dbb-4952-b3b1-cbb39635ebba.png)
+
+
 # Output
 
 ## Login Screen

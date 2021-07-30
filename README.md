@@ -18,16 +18,23 @@ Blockchain based regulatory reporting and calculation of energy royalties. A sys
 # Output
 
 ## Login Screen
+![login](https://user-images.githubusercontent.com/60880656/127679794-01e0005b-0ca2-409f-990e-3f8faf8bd0e9.png)
 
 ## Oil Measurement Screen
+![oil](https://user-images.githubusercontent.com/60880656/127679825-b2058673-8b3b-49dd-92c7-96f22e124461.png)
 
 ## Gas Measurement Screen
+![gas](https://user-images.githubusercontent.com/60880656/127679832-59b82a6b-7edc-459a-a3c9-04f123694a13.png)
 
 ## All Data Stored in the Blockchain
+![details](https://user-images.githubusercontent.com/60880656/127679849-7bc97428-b3c7-44c7-905e-116220e75897.png)
 
 ## Edit or Approve Measurement Screen
+![edit](https://user-images.githubusercontent.com/60880656/127679861-b1e69e36-e24f-4ff7-99c1-e0691e70180c.png)
 
 ## API server
+![apiserver](https://user-images.githubusercontent.com/60880656/127679898-4fba4d08-d929-4481-b8e6-9288d2e89557.png)
+
 
 # Postman Collection
 The postman collection can be found inside api/postman-collection

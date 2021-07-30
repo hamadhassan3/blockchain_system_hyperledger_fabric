@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "e0f9a3ca-7aa2-460a-b3ea-8aba6501af06",
+		"name": "Blockchain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"field_staff1\",\n    \"orgName\": \"Org1\",\n    \"password\": \"password\",\n    \"role\": \"Production_Accountant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"officer_of_the_company1\",\n    \"orgName\": \"Org1\",\n    \"password\": \"password\",\n    \"role\": \"Officer_Of_The_Company\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Measurement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjAyMzk4NzMsInVzZXJuYW1lIjoiY29sZCIsIm9yZ05hbWUiOiJPcmcxIiwiaWF0IjoxNjIwMjAzODczfQ.cU-XDlIW_xweFo0qKyiNhKFcw5VrOs3sIgZEXuOq444",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement_1\",\n    \"function\": \"addNewMeasurement\",\n    \"args\": [\n        10,\n        11,\n        12,\n        13,\n        14,\n        15,\n        16\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Measurement By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcyMDA1MTcsInVzZXJuYW1lIjoiZmllbGRfc3RhZmYxIiwib3JnTmFtZSI6Ik9yZzEiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiaWF0IjoxNjI3MTY0NTE3fQ.d9KeBqpJQd1I-yOYazsnKifgOaAPGGKjc0toa6NAf_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement\",\n    \"function\": \"queryMeasurementByID\",\n    \"args\": [\n        3\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query by person id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcyMDA1MTcsInVzZXJuYW1lIjoiZmllbGRfc3RhZmYxIiwib3JnTmFtZSI6Ik9yZzEiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiaWF0IjoxNjI3MTY0NTE3fQ.d9KeBqpJQd1I-yOYazsnKifgOaAPGGKjc0toa6NAf_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement\",\n    \"function\": \"queryAllMeasurements\",\n    \"args\": [\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get history for a measurement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcyMDA1MTcsInVzZXJuYW1lIjoiZmllbGRfc3RhZmYxIiwib3JnTmFtZSI6Ik9yZzEiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiaWF0IjoxNjI3MTY0NTE3fQ.d9KeBqpJQd1I-yOYazsnKifgOaAPGGKjc0toa6NAf_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement\",\n    \"function\": \"getHistoryForAsset\",\n    \"args\": [\n        3\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a measurement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcyMDM3NDcsInVzZXJuYW1lIjoicHJvZHVjdGlvbl9hY2NvdW50YW50MSIsIm9yZ05hbWUiOiJPcmcxIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsImlhdCI6MTYyNzE2Nzc0N30.tg8B_O7s7Up0THZZ5w96w-SVKYCBO3agZdzDIYyzQJ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement\",\n    \"function\": \"updateData\",\n    \"args\": [\n        3,\n        11,\n        12,\n        13,\n        14,\n        15,\n        16,\n        \"I updated the measurement because I felt like doing it\"\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve the measurement",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjcyMDIxNTIsInVzZXJuYW1lIjoicHJvZHVjdGlvbl9hY2NvdW50YW50MSIsIm9yZ05hbWUiOiJPcmcxIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsImlhdCI6MTYyNzE2NjE1Mn0.oWr4oWytu35dJ1n9ZaZfGec1DwXR52rFvo6SMfPg3kk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n    \"channelName\": \"mychannel\",\n    \"chaincodeName\": \"measurement\",\n    \"function\": \"approveMeasurement\",\n    \"args\": [\n        3\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/channels/mychannel/chaincodes/measurement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"measurement"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

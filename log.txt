@@ -1,0 +1,2 @@
+Installed chaincodes on peer:
+Package ID: measurement_1:a320c8c241a5d9a09e01eabb98b0f20cb73eeb4e9c45d5f402290598c413065b, Label: measurement_1

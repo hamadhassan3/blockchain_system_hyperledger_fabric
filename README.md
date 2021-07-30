@@ -13,6 +13,7 @@ Blockchain based regulatory reporting and calculation of energy royalties. A sys
 9. The frontend interacts with the blockchain using api
 10. The api is secured using JWT
 11. Nodes in the blokchain use Raft consensus protocol
+12. History of each measurement remains saved. The person who made the change is always traceable.
 
 # Output
 

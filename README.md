@@ -50,7 +50,7 @@ username: field_staff1 password: password
 username: production_accountant1 password: password
 username: officer_of_the_company1 password: password
 
-#Operating System
+# Operating System
 Ubuntu 20.04.2 LTS
 
 # How to Run?
